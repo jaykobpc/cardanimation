@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+
+    &::-webkit-scrollbar {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Nunito", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    text-rendering: geometricPrecision;
+    -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: no-contextual;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#app {
+    background-color: $color-grey-100;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+input,
+textarea {
+    -webkit-writing-mode: horizontal-tb !important;
+    -moz-writing-mode: horizontal-tb !important;
+    writing-mode: horizontal-tb !important;
+    -webkit-appearance: none;
+    font-family: inherit;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.copyable-text {
+    -webkit-touch-callout: text;
+    /* iOS Safari */
+    -webkit-user-select: text;
+    /* Safari */
+    -khtml-user-select: text;
+    /* Konqueror HTML */
+    -moz-user-select: text;
+    /* Old versions of Firefox */
+    -ms-user-select: text;
+    /* Internet Explorer/Edge */
+    user-select: text;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+a {
+    text-decoration: none;
+}
+
+[device-frame] {
+    width: 450px;
+    margin: 0 auto;
+    height: 768px;
+    top: 50px;
+    border: 13px solid $color-grey-400;
+    border-radius: 12px;
+    position: relative;
+
+    @include respond(tab-port) {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border: none;
+        border-radius: unset;
+    }
+}

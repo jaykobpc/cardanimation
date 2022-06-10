@@ -5,6 +5,12 @@
     height: 100%;
 }
 
+.title {
+    padding: 5px 10px;
+    font-size: 26px;
+    color: $color-grey-800;
+}
+
 .appbar {
     width: 100%;
     padding: 8px 8px;
@@ -172,7 +178,7 @@
         padding: 15px 10px;
         text-align: center;
         width: 100%;
-        color: $color-grey-800;
+        color: rgb(150, 77, 26);
         cursor: pointer;
         transition: background-color 0.3s ease;
 
